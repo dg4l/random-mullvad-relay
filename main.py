@@ -9,11 +9,10 @@ allowed_countries = ["USA", "Canada"]
 
 def get_allowed_relays(cities):
     ret = []
-    relays = []
     for city in cities:
         for relay in city["relays"]:
-            relays.append(relay)
-    return [relay["hostname"] for relay in relays]
+            ret.append(relay["hostname"])
+    return ret
 
 def get_allowed_cities(countries):
     ret = []
