@@ -1,5 +1,5 @@
 #!/bin/python3
-from random import randint
+from random import choice 
 import requests
 import pprint 
 import json
@@ -30,8 +30,7 @@ def main():
     countries = response_json["countries"]
     cities = get_allowed_cities(countries)
     allowed_relays = get_allowed_relays(cities)
-    random_relay_idx = randint(0, len(allowed_relays) - 1)
-    chosen_relay = allowed_relays[random_relay_idx]
+    chosen_relay = choice(allowed_relays)
     print(chosen_relay)
 
 if __name__ == "__main__":
