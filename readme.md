@@ -1,6 +1,6 @@
 # random-mullvad-relay
 
-script i wrote in 10 minutes to select a random mullvad relay
+script i wrote to select a random mullvad relay from a list of allowed countries
 
 ## Note
 
