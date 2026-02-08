@@ -1,8 +1,6 @@
 #!/bin/python3
 from random import choice 
 import requests
-import pprint 
-import json
 
 url = "https://api.mullvad.net/public/relays/wireguard/v1"
 allowed_countries = ["USA", "Canada"]
