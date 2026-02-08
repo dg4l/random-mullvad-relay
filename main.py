@@ -5,6 +5,7 @@ import pprint
 import json
 
 url = "https://api.mullvad.net/public/relays/wireguard/v1"
+allowed_countries = ["USA", "Canada"]
 
 def get_allowed_relays(cities):
     ret = []
@@ -16,7 +17,6 @@ def get_allowed_relays(cities):
 
 def get_allowed_cities(countries):
     ret = []
-    allowed_countries = ["USA", "Canada"]
     for country in countries:
         if country["name"].lower() in [allowed.lower() for allowed in allowed_countries]:
             cities = country["cities"]
